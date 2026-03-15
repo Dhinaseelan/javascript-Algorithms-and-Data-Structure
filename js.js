@@ -1,3 +1,33 @@
+//factorial using recursive 
+function recursive(n){
+   if(n===0)return 1
+  return n*recursive(n-1)
+
+}
+console.log(recursive(5))
+const arr=[-5,2,10,4,6];
+const findt=(n)=>{
+  for(i=0;i<arr.length;i++){
+    if(arr[i]===n) return i
+  }
+  return -1
+}
+console.log(findt(0))
+//binary search
+let b=[2,4,5,6,7,78]
+const binary=(n,t)=>{
+  let left=0;
+  let right=n.length-1;
+  while(left<=right){
+    let middle=Math.floor((left+right)/2);
+    if(t===n[middle]) return middle
+    if(t>n[middle]) left=middle+1
+    if(t<n[middle]) right=middle-1
+  }
+  return -1
+}
+
+console.log(binary(b,9))
 //fibonacci using recursive
 function recursiveFibonacci(n) {
   if (n < 2) {
