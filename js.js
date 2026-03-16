@@ -1,3 +1,18 @@
+//bubble sort
+const bubble = (a) => {
+  let swapped;
+  do{
+    swapped=false;
+  for (i = 0; i < a.length - 1; i++) {
+    if (a[i] > a[i + 1]) {
+      [a[i],a[i+1]]=[a[i+1],a[i]]
+      swapped=true;
+    }
+  }}while(swapped)
+  return a
+};
+b = [2, 1, -6, 9, 5,-9];
+ console.log(bubble(b));
 //factorial using recursive 
 function recursive(n){
    if(n===0)return 1
