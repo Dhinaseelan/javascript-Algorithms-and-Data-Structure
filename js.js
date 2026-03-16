@@ -1,3 +1,16 @@
+//insertion sort 
+let inser=(a)=>{
+  for(i=1;i<a.length;i++){
+    for(j=i;j>0;j--){
+      if(a[j]<a[j-1]){
+        [a[j],a[j-1]]=[a[j-1],a[j]]
+      }
+      else break
+    }
+  }
+}
+inser(b)
+console.log(b)
 //bubble sort
 const bubble = (a) => {
   let swapped;
