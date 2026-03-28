@@ -1,3 +1,19 @@
+//quick sort 
+let quicksort=(arr)=>{
+  if(2>arr.length) return arr
+  let left=[];
+  let right=[];
+  let pivot=arr.length-1;
+  for(i=0;i<arr.length-1;i++){
+    if(arr[i]<arr[pivot]) 
+    {
+      left.push(arr[i])
+    }
+    else right.push(arr[i])
+  }
+  return [...quicksort(left),arr[pivot],...quicksort(right)];
+}
+console.log(quicksort([-2,3,4,-2,9,-8]))
 //insertion sort 
 let inser=(a)=>{
   for(i=1;i<a.length;i++){
