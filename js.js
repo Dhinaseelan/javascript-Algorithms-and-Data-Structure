@@ -1,3 +1,24 @@
+//merge sort 
+let margesort=(arr)=>{
+  if(arr.length<2) return arr
+ const mid=Math.floor(arr.length/2);
+  const leftel=arr.slice(0,mid);
+  let rightel=arr.slice(mid)
+  return marge(margesort(leftel),margesort(rightel))
+}
+let marge=(leftel,rightel)=>{
+  const sorted=[];
+  while(leftel.length&&rightel.length){
+    if(leftel[0]<=rightel[0]){
+      sorted.push(leftel.shift())
+    }
+    else{
+      sorted.push(rightel.shift())
+    }
+  }
+  return [...sorted,...leftel,...rightel]
+}
+console.log(margesort([0,-1,5,-6,9,8]))
 //quick sort 
 let quicksort=(arr)=>{
   if(2>arr.length) return arr
